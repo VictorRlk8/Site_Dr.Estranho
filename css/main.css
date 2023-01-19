@@ -1,0 +1,142 @@
+main{
+	flex-grow:1; /*Essa propriedade controla a proporção que um dos itens deve crescer caso seja preciso. Os valores aceitos são apenas números positivos e o valor padrão é 0.*/
+	display: flex;/*Formalmente, a propriedade display define os tipos de exibição internos e externos de um elemento.*/
+}
+
+/* Container:Ele pode definir as margens laterais da página, ou deixar sem margens e, também, posiciona o conteúdo no centro do browser*/
+.content-container{
+	
+	flex-grow: 1;
+	display:flex;
+	flex-direction:column;/*define como os itens flexíveis são colocados no contêiner flexível, definindo o eixo principal e a direção (normal ou invertido).*/
+	justify-content:center;/*é empregada para alinhar os elementos ao longo do eixo principal, cuja direção ( row ou column ) é definida a partir da propriedade flex-direction */
+	color:#fff/*Mais usado para definir uma cor de texto*/
+}
+
+/*Texto*/
+.content-container h1{
+	font weight:400	;/*Defone largura do texto*/
+	font-size:7rem;/*A propriedade font-size é usada para indicar o tamanho da letra(fonte) em CSS*/
+	display:flex;
+	flex-direction:column;
+	
+	
+}
+/*texto*/
+.content-container h1 span{
+	font-size:2rem;
+	font-weight:200;
+	transform: translateY(30px) /*sando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos*/
+	
+	
+}
+/*texto-titulo*/
+.movie-title{
+	font-size: 2.6rem;
+	font-style:italic;
+	color:#E62721;
+	transform: translateY(-20px);
+	
+}
+/*texto*/
+.movie-text{
+	width:550px;/*largura*/
+	font-size:1.1rem;
+	font-weight:100;/*altura da letra*/
+
+}
+
+/*botão*/
+.movie-button{
+	height:80px;/*altura*/
+	width:300px;/*largura*/
+	background-color:#E62721;/*Define cor de fundo do elemento*/
+	border-radius:10px;/*destina-se a definir bordas arredondadas*/
+	font-size:1.5rem;
+	font-weight:200;
+	display:flex;
+	justify-content:center;
+	align-items:center;/*controla o alinhamento de todos os itens no eixo transversal*/
+	margin-top:30px;/* indica o espaço acima do elemento*/
+	
+}
+
+/*Hover uma ação gerada ao passar o cursor em cima do elemento*/
+.movie-button:hover{
+	background-color: #800000; 
+	padding: 6px;/*define uma a distância entre o conteúdo de um elemento e suas bordas*/
+	transition:all .4s ;/*ela fará o elemento se mover mais suavemente*/
+}
+
+.social-container{
+	
+	width: 48px;	
+}
+
+/*Icones*/*/
+.social-container ul {
+	
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end ;
+	align-items:center;
+	gap:20px;/*Espaço entre os elementos*/
+	
+}
+
+.social-container li{
+	
+	height:48px;
+	width:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:50%;
+	border:2px solid #fff;
+	transition:all 0.5s;
+}
+
+.social-container i {
+	
+	font-size:1.5rem; 
+	
+}
+
+.social-container li:hover{
+	background-color:#E62721;
+	border-color:#E62721;
+}
+
+@media (max-width:768px) {
+	
+	.content-container{
+		justify-content:flex-end;
+		margin-bottom:50px;
+	}
+	.content-container h1{
+		font-size: 4rem;
+		
+	}
+	
+	.content-container h1 span{
+		font-size: 1.5rem;
+		transform: translateY(15px)
+	}
+	
+	.movie-title{
+		font-size: 1.45rem;
+		transform: translateY(5px)
+	}
+	.movie-text{
+		display: none;
+		
+	}
+	
+	.social-container{
+		display: none;
+	}
+	
+}
+
+

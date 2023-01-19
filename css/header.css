@@ -1,0 +1,54 @@
+header{
+	
+	display:flex;
+	justify-content: space-between;
+}
+
+.links-container{
+	
+	display:flex;
+	gap:32px;
+	
+}
+
+.links-container a {
+	
+	text-shadow: 2px 2px 2px #000;
+	
+}
+
+.links-container a:hover{
+	background-color: #E62721; 
+	padding: 6px;
+	transition:all .2s ;
+}
+
+@media (max-width:768px){
+	
+	.links-container{
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:65px;
+		font-size: 2.5rem;
+		background-color:#000;
+		transform: translateX(100%);
+		z-index:1;
+		opacity:0;
+		transition: all 0.5s;
+		
+	}
+	
+	.menu-burger-container.active ~ .links-container{
+		opacity:1;
+		transform: translateX(0%);
+		
+		
+	} 
+}
+
